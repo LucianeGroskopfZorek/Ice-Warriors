@@ -48,6 +48,190 @@ body.light-theme {
   --shadow: rgba(20, 40, 70, 0.12);
 }
 
+html[data-theme='light'],
+body.light-theme {
+  --bg: #edf6ff;
+  --bg-strong: #dfeeff;
+  --bg-soft: #eaf4ff;
+  --panel: rgba(255, 255, 255, 0.8);
+  --panel-alt: rgba(255, 255, 255, 0.92);
+  --panel-strong: #edf6ff;
+  --surface: #edf4ff;
+  --surface-2: #dfeeff;
+  --line: rgba(19, 65, 118, 0.15);
+  --line-strong: rgba(19, 65, 118, 0.25);
+  --text: #10203d;
+  --text-soft: #2a3d57;
+  --text-muted: #53657c;
+  --primary: #1460d0;
+  --primary-strong: #4fa3ff;
+  --ice: #0b2549;
+  --glacier: #56709c;
+  --warm: #c98b5a;
+  --shadow: rgba(20, 40, 70, 0.12);
+}
+
+.hero {
+  --text: #eaf4ff;
+  --text-soft: #c9d6e3;
+  --text-muted: #b2c6dc;
+  --line: rgba(255, 255, 255, 0.25);
+  --line-strong: rgba(255, 255, 255, 0.4);
+  --surface: rgba(255, 255, 255, 0.06);
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel-alt: rgba(255, 255, 255, 0.08);
+  --primary-strong: #a9d0ff;
+  color: var(--text);
+}
+
+.hero .eyebrow {
+  color: #dfeeff;
+  text-shadow: 0 2px 16px rgba(7, 24, 39, 0.38);
+}
+
+.hero .hero-subtitle,
+.hero .hero-meta span,
+.hero .card-badge,
+.hero .render-label,
+.hero .caption-tag {
+  color: var(--text-soft);
+}
+
+.hero .btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #eaf4ff;
+  backdrop-filter: blur(10px);
+}
+
+.hero .btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.hero .hero-meta li {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.hero .hero-meta strong {
+  color: #eaf4ff;
+}
+
+.hero .hero-card-main {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 30px 60px rgba(2, 11, 22, 0.42);
+}
+
+.hero .card-badge,
+.hero .render-label,
+.hero .caption-tag {
+  background: rgba(8, 19, 31, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text-soft);
+}
+
+html[data-theme='light'] .site-header {
+  background: rgba(237, 246, 255, 0.6);
+  border-bottom-color: rgba(17, 45, 78, 0.08);
+}
+
+html[data-theme='light'] .site-nav a,
+html[data-theme='light'] .theme-toggle {
+  color: var(--text-soft);
+}
+
+html[data-theme='light'] .theme-toggle {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(17, 45, 78, 0.12);
+}
+
+html[data-theme='light'] .journey-item,
+html[data-theme='light'] .temp-card,
+html[data-theme='light'] .benefit-card,
+html[data-theme='light'] .price-card,
+html[data-theme='light'] .contact-panel,
+html[data-theme='light'] .faq-item,
+html[data-theme='light'] .gallery-viewport,
+html[data-theme='light'] .community-banner,
+html[data-theme='light'] .site-footer,
+html[data-theme='light'] .map-card {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(17, 45, 78, 0.12);
+  box-shadow: 0 18px 32px rgba(20, 40, 70, 0.08);
+}
+
+html[data-theme='light'] .journey-copy p,
+html[data-theme='light'] .benefit-card p,
+html[data-theme='light'] .temp-card p,
+html[data-theme='light'] .lead,
+html[data-theme='light'] .shift-copy p,
+html[data-theme='light'] .beyond-copy p,
+html[data-theme='light'] .community-banner p,
+html[data-theme='light'] .visit-list,
+html[data-theme='light'] .footer-copy,
+html[data-theme='light'] .footer-meta p,
+html[data-theme='light'] .faq-answer p,
+html[data-theme='light'] .placeholder,
+html[data-theme='light'] .contact-panel span,
+html[data-theme='light'] .contact-panel input::placeholder,
+html[data-theme='light'] .contact-panel textarea::placeholder,
+html[data-theme='light'] .site-nav a,
+html[data-theme='light'] .theme-toggle {
+  color: var(--text-soft);
+}
+
+html[data-theme='light'] .benefit-card::before {
+  background: linear-gradient(135deg, rgba(16, 96, 208, 0.08), transparent 60%);
+}
+
+html[data-theme='light'] .faq-question {
+  color: var(--text);
+}
+
+html[data-theme='light'] .contact-panel input,
+html[data-theme='light'] .contact-panel textarea {
+  background: rgba(234, 244, 255, 0.8);
+  color: var(--text);
+}
+
+html[data-theme='light'] .site-footer {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+html[data-theme='light'] .community-banner {
+  background: linear-gradient(135deg, rgba(234, 244, 255, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+html[data-theme='light'] .price-card.featured {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(222, 239, 255, 0.9));
+}
+
+html[data-theme='light'] .plunge,
+html[data-theme='light'] .shift-reset,
+html[data-theme='light'] .beyond,
+html[data-theme='light'] .benefits {
+  background-color: transparent;
+}
+
+html[data-theme='light'] .plunge {
+  background: linear-gradient(180deg, rgba(147, 179, 211, 0.12), rgba(147, 179, 211, 0.06));
+}
+
+html[data-theme='light'] .shift-reset {
+  background: linear-gradient(135deg, rgba(218, 232, 250, 0.8), rgba(255, 255, 255, 0.72));
+}
+
+html[data-theme='light'] .beyond {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+html[data-theme='light'] .benefits {
+  background: linear-gradient(180deg, rgba(13, 36, 62, 0.03), rgba(13, 36, 62, 0));
+}
+
 * {
   box-sizing: border-box;
 }
@@ -211,7 +395,7 @@ body.light-theme .site-header {
 }
 
 .hero-bg {
-  background-image: linear-gradient(120deg, rgba(7, 24, 39, 0.78), rgba(9, 26, 52, 0.72)), url('../assets/img/Ice_Warriors_fronte_loja.png');
+  background-image: linear-gradient(120deg, rgba(7, 24, 39, 0.82), rgba(9, 26, 52, 0.74)), url('../assets/img/Ice_Warriors_fronte_loja.png');
   background-size: cover;
   background-position: center;
   filter: saturate(0.8) contrast(1.05);
@@ -220,9 +404,9 @@ body.light-theme .site-header {
 
 .hero-overlay {
   background:
-    linear-gradient(90deg, rgba(10, 26, 58, 0.8) 0%, rgba(10, 26, 58, 0.35) 35%, rgba(10, 26, 58, 0.15) 100%),
-    radial-gradient(circle at 20% 20%, rgba(79, 163, 255, 0.16), transparent 30%),
-    radial-gradient(circle at 80% 20%, rgba(201, 139, 90, 0.20), transparent 30%);
+    linear-gradient(90deg, rgba(5, 18, 32, 0.82) 0%, rgba(8, 20, 35, 0.58) 38%, rgba(8, 20, 35, 0.26) 100%),
+    radial-gradient(circle at 20% 20%, rgba(79, 163, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(201, 139, 90, 0.22), transparent 34%);
 }
 
 .hero-particles {
@@ -378,9 +562,9 @@ body.light-theme .site-header {
   width: min(100%, 500px);
   border-radius: var(--radius-lg);
   padding: 14px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--line);
-  box-shadow: 0 30px 60px rgba(2, 11, 22, 0.32);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 30px 60px rgba(2, 11, 22, 0.42);
 }
 
 .hero-card-main img {
@@ -677,7 +861,7 @@ body.light-theme .site-header {
 
 .price-card.featured {
   border-color: rgba(79, 163, 255, 0.45);
-  background: linear-gradient(180deg, rgba(18, 43, 77, 0.75), rgba(13, 25, 46, 0.9));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(222, 239, 255, 0.9));
 }
 
 .plan-name {

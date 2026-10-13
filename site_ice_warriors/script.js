@@ -96,6 +96,13 @@ function renderGallery(index) {
   });
 }
 
+function applyTheme(isLight) {
+  document.documentElement.dataset.theme = isLight ? 'light' : 'dark';
+  document.body.classList.toggle('light-theme', isLight);
+  themeToggle.textContent = isLight ? 'Dark' : 'Frost';
+  themeToggle.setAttribute('aria-label', isLight ? 'Toggle dark theme' : 'Toggle light theme');
+}
+
 prevBtn.addEventListener('click', showPrevSlide);
 nextBtn.addEventListener('click', showNextSlide);
 
@@ -122,11 +129,11 @@ siteNav.querySelectorAll('a').forEach((link) => {
 });
 
 themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('light-theme');
-  const isLight = document.body.classList.contains('light-theme');
-  themeToggle.textContent = isLight ? 'Dark' : 'Frost';
-  themeToggle.setAttribute('aria-label', isLight ? 'Toggle dark theme' : 'Toggle light theme');
+  const isLight = !document.body.classList.contains('light-theme');
+  applyTheme(isLight);
 });
+
+applyTheme(document.body.classList.contains('light-theme'));
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
