@@ -1,75 +1,456 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ice Warriors Recovery</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="hero">
-    <nav>
-      <h1 class="logo">ICE WARRIORS</h1>
-      <ul class="menu">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-    <div class="hero-text">
-      <h2>Recupere-se. Recarregue-se.</h2>
-      <p>Centro de recuperação muscular e bem-estar.</p>
-      <a href="#contato" class="btn">Agende sua sessão</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ice Warriors offers guided cold plunge recovery in Lake Nona, Orlando, FL. Recover with intention in a premium wellness environment." />
+    <meta property="og:title" content="Ice Warriors | Recover Like a Warrior." />
+    <meta property="og:description" content="Guided cold plunge recovery in Lake Nona, Orlando, FL." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../assets/img/Ice_Warriors_fronte_loja.png" />
+    <meta name="theme-color" content="#0A1A3A" />
+    <title>Ice Warriors | Recover Like a Warrior.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23EAF4FF' d='M32 4l7 16 13-2-9 13 9 13-13-2-7 16-7-16-13 2 9-13-9-13 13 2 7-16z'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Ice Warriors",
+        "description": "Guided cold plunge recovery studio in Lake Nona, Orlando, FL.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Lake Nona",
+          "addressLocality": "Orlando",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "areaServed": "Lake Nona, Orlando, FL",
+        "url": "https://www.icewarriors.com"
+      }
+    </script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a class="brand" href="#top" aria-label="Ice Warriors home">
+            <span class="brand-mark" aria-hidden="true">✦</span>
+            <span class="brand-text">ICE WARRIORS</span>
+          </a>
+
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+            <a href="#journey">Journey</a>
+            <a href="#plunge">The Plunge</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#pricing">Memberships</a>
+            <a href="#visit">Visit</a>
+            <button class="theme-toggle" type="button" aria-label="Toggle light theme">Frost</button>
+          </nav>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-bg" aria-hidden="true"></div>
+          <div class="hero-overlay" aria-hidden="true"></div>
+          <div class="hero-particles" aria-hidden="true"></div>
+
+          <div class="container hero-inner">
+            <div class="hero-copy reveal">
+              <p class="eyebrow">Lake Nona • Orlando, Florida</p>
+              <h1>Recover Like a Warrior.</h1>
+              <p class="hero-subtitle">Guided cold plunge recovery for athletes, professionals, and people who want more clarity, less stress, and a stronger reset.</p>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#visit">Book Your First Plunge</a>
+                <a class="btn btn-secondary" href="#journey">See the Experience</a>
+              </div>
+
+              <ul class="hero-meta" aria-label="Key highlights">
+                <li><strong>41°F</strong><span>Cold plunge</span></li>
+                <li><strong>3 temps</strong><span>Recovery zones</span></li>
+                <li><strong>Guided flow</strong><span>Safe + calm</span></li>
+              </ul>
+            </div>
+
+            <div class="hero-visual reveal">
+              <div class="hero-card hero-card-main">
+                <img src="../assets/img/Ice_Warriors_fronte_loja.png" alt="Front facade of the Ice Warriors studio in Lake Nona" fetchpriority="high" />
+                <div class="card-badge">Conceptual rendering</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section journey" id="journey">
+          <div class="container">
+            <div class="section-header reveal">
+              <p class="eyebrow">The Ice Warriors Journey</p>
+              <h2>Structured recovery, without the noise.</h2>
+            </div>
+
+            <div class="journey-grid">
+              <article class="journey-item reveal">
+                <span class="step-number">01</span>
+                <div class="journey-image">
+                  <img src="../assets/img/ice_025.jpg" alt="Reception area at Ice Warriors" loading="lazy" />
+                  <span class="caption-tag">Check-in</span>
+                </div>
+                <div class="journey-copy">
+                  <h3>Check-in</h3>
+                  <p>Settle in, review your flow, and get oriented in a calm, premium setting designed to lower the noise of the day.</p>
+                </div>
+              </article>
+
+              <article class="journey-item reveal">
+                <span class="step-number">02</span>
+                <div class="journey-image">
+                  <img src="../assets/img/ice_024.jpg" alt="Breathing and preparation area before the cold plunge" loading="lazy" />
+                  <span class="caption-tag">Breathe &amp; Prepare</span>
+                </div>
+                <div class="journey-copy">
+                  <h3>Breathe &amp; Prepare</h3>
+                  <p>Breath-led preparation helps quiet the nervous system, regulate energy, and ease the transition into the cold.</p>
+                </div>
+              </article>
+
+              <article class="journey-item reveal">
+                <span class="step-number">03</span>
+                <div class="journey-image">
+                  <img src="../assets/img/ice_021.jpg" alt="Three cold plunge tubs in the recovery lounge" loading="lazy" />
+                  <span class="caption-tag">The Plunge</span>
+                </div>
+                <div class="journey-copy">
+                  <h3>The Plunge</h3>
+                  <p>Choose a temperature zone designed for your recovery window, from the more intense 41°F reset to gentler immersion at 50°F.</p>
+                </div>
+              </article>
+
+              <article class="journey-item reveal">
+                <span class="step-number">04</span>
+                <div class="journey-image">
+                  <img src="../assets/img/ice_022.jpg" alt="Rewarming lounge with tea and warm environment" loading="lazy" />
+                  <span class="caption-tag">Rewarm &amp; Reset</span>
+                </div>
+                <div class="journey-copy">
+                  <h3>Rewarm &amp; Reset</h3>
+                  <p>Re-enter slowly with warmth, hydration, tea, and a grounded recovery rhythm that feels intentional and sustainable.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section plunge" id="plunge">
+          <div class="container plunge-layout">
+            <div class="plunge-copy reveal">
+              <p class="eyebrow">The Plunge</p>
+              <h2>Three temperatures. One disciplined reset.</h2>
+              <p class="lead">Every session is designed to support a clear, controlled recovery ritual — not a dramatic challenge, but an intentional practice.</p>
+            </div>
+
+            <div class="plunge-visual reveal">
+              <img src="../assets/img/ice_021.jpg" alt="Three cold plunge baths reflecting the Ice Warriors recovery experience" loading="lazy" />
+              <span class="render-label">Conceptual rendering</span>
+            </div>
+          </div>
+
+          <div class="container temp-grid">
+            <article class="temp-card reveal">
+              <span class="temp-value">41°F</span>
+              <h3>Deep Reset</h3>
+              <p>Designed for experienced cold immersion users and intentional recovery windows.</p>
+              <small>Suggested duration: 1–3 minutes</small>
+            </article>
+
+            <article class="temp-card reveal">
+              <span class="temp-value">48°F</span>
+              <h3>Focused Recovery</h3>
+              <p>Ideal for performance-minded guests seeking clarity, cooling, and a stronger post-session reset.</p>
+              <small>Suggested duration: 2–4 minutes</small>
+            </article>
+
+            <article class="temp-card reveal">
+              <span class="temp-value">50°F</span>
+              <h3>Ease-In Plunge</h3>
+              <p>A gentler immersion for first-timers, those easing into the habit, or anyone wanting a softer entry.</p>
+              <small>Suggested duration: 2–5 minutes</small>
+            </article>
+          </div>
+        </section>
+
+        <section class="section shift-reset" id="shift-reset">
+          <div class="container shift-layout">
+            <div class="shift-copy reveal">
+              <p class="eyebrow">Shift Reset</p>
+              <h2>Recovery for the people on night shift.</h2>
+              <p>Built for healthcare professionals, emergency workers, and anyone working demanding hours who needs a calmer, colder reset between shifts.</p>
+              <a class="btn btn-primary" href="#visit">Ask About Shift Sessions</a>
+            </div>
+
+            <div class="shift-visual reveal">
+              <img src="../assets/img/ice_026.jpg" alt="Night-time recovery studio scene for shift reset" loading="lazy" />
+              <span class="render-label dark">Conceptual rendering</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section benefits" id="benefits">
+          <div class="container">
+            <div class="section-header reveal">
+              <p class="eyebrow">Why Cold Immersion</p>
+              <h2>Recovery that feels grounded, not extreme.</h2>
+            </div>
+
+            <div class="benefits-grid">
+              <article class="benefit-card glass reveal">
+                <span class="benefit-icon">01</span>
+                <h3>Restore energy</h3>
+                <p>Cold immersion may support recovery, reduce fatigue, and help you feel more alert after a demanding day or training block.</p>
+              </article>
+
+              <article class="benefit-card glass reveal">
+                <span class="benefit-icon">02</span>
+                <h3>Calm the system</h3>
+                <p>Many guests use the plunge as a practical reset for stress, mental load, and nervous system activation.</p>
+              </article>
+
+              <article class="benefit-card glass reveal">
+                <span class="benefit-icon">03</span>
+                <h3>Sharpen focus</h3>
+                <p>The experience can help support mental clarity and a more intentional pace before the next block of work or training.</p>
+              </article>
+
+              <article class="benefit-card glass reveal">
+                <span class="benefit-icon">04</span>
+                <h3>Ease stiffness</h3>
+                <p>Cold exposure can contribute to a sense of physical reset after workouts, long commutes, or long periods of inactivity.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section beyond" id="beyond">
+          <div class="container beyond-layout">
+            <div class="beyond-visual reveal">
+              <img src="../assets/img/ice_023.jpg" alt="Movement and mobility session area at Ice Warriors" loading="lazy" />
+              <span class="render-label">Conceptual rendering</span>
+            </div>
+
+            <div class="beyond-copy reveal">
+              <p class="eyebrow">Beyond the Plunge</p>
+              <h2>Recovery support that complements the ritual.</h2>
+              <p>For guests who want more than cold immersion, we support a fuller recovery rhythm with mobility, movement, and holistic options that fit around training and daily life.</p>
+              <ul>
+                <li>Mobility and post-plunge movement guidance</li>
+                <li>Jiu-jitsu as a complementary training lens</li>
+                <li>Low-carb nutrition support as a lifestyle conversation, not a slogan</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section community">
+          <div class="container community-banner reveal">
+            <p class="eyebrow">Community &amp; Purpose</p>
+            <h2>Built from a long-standing practice of cold immersion and a deeper idea of recovery as discipline.</h2>
+            <p>Rooted in the practice of ice immersion since 2021, Ice Warriors continues that philosophy with a welcoming, grounded approach inspired by the Wim Hof method and the culture of discipline from Brazil.</p>
+          </div>
+        </section>
+
+        <section class="section pricing" id="pricing">
+          <div class="container">
+            <div class="section-header reveal">
+              <p class="eyebrow">Memberships &amp; Pricing</p>
+              <h2>Flexible options for regular resets.</h2>
+            </div>
+
+            <div class="pricing-grid">
+              <article class="price-card reveal">
+                <p class="plan-name">Single Plunge</p>
+                <h3>TODO</h3>
+                <p class="placeholder">Price to be confirmed.</p>
+              </article>
+
+              <article class="price-card featured reveal">
+                <p class="plan-name">Monthly</p>
+                <h3>TODO</h3>
+                <p class="placeholder">Monthly plan details pending.</p>
+              </article>
+
+              <article class="price-card reveal">
+                <p class="plan-name">Corporate / Shift</p>
+                <h3>TODO</h3>
+                <p class="placeholder">Group or shift pricing TBD.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section gallery" id="gallery">
+          <div class="container">
+            <div class="section-header reveal">
+              <p class="eyebrow">Gallery</p>
+              <h2>A premium recovery environment.</h2>
+            </div>
+
+            <div class="gallery-shell reveal">
+              <button class="carousel-btn prev" type="button" aria-label="Previous image">&#10094;</button>
+
+              <div class="gallery-viewport">
+                <div class="gallery-track">
+                  <figure class="gallery-slide is-active">
+                    <img src="../assets/img/ice_021.jpg" alt="Three cold plunge baths with different temperature zones" loading="lazy" />
+                    <figcaption>Conceptual rendering</figcaption>
+                  </figure>
+                  <figure class="gallery-slide">
+                    <img src="../assets/img/ice_022.jpg" alt="Rewarm and reset lounge" loading="lazy" />
+                    <figcaption>Conceptual rendering</figcaption>
+                  </figure>
+                  <figure class="gallery-slide">
+                    <img src="../assets/img/ice_023.jpg" alt="Mobility and movement space" loading="lazy" />
+                    <figcaption>Conceptual rendering</figcaption>
+                  </figure>
+                  <figure class="gallery-slide">
+                    <img src="../assets/img/ice_024.jpg" alt="Breathing and preparation area" loading="lazy" />
+                    <figcaption>Conceptual rendering</figcaption>
+                  </figure>
+                  <figure class="gallery-slide">
+                    <img src="../assets/img/ice_025.jpg" alt="Reception and welcome area" loading="lazy" />
+                    <figcaption>Conceptual rendering</figcaption>
+                  </figure>
+                  <figure class="gallery-slide">
+                    <img src="../assets/img/ice_026.jpg" alt="Night recovery concept space" loading="lazy" />
+                    <figcaption>Conceptual rendering</figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              <button class="carousel-btn next" type="button" aria-label="Next image">&#10095;</button>
+            </div>
+
+            <div class="gallery-dots" aria-label="Carousel navigation">
+              <button class="dot is-active" type="button" aria-label="Show slide 1"></button>
+              <button class="dot" type="button" aria-label="Show slide 2"></button>
+              <button class="dot" type="button" aria-label="Show slide 3"></button>
+              <button class="dot" type="button" aria-label="Show slide 4"></button>
+              <button class="dot" type="button" aria-label="Show slide 5"></button>
+              <button class="dot" type="button" aria-label="Show slide 6"></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section visit" id="visit">
+          <div class="container visit-grid">
+            <div class="visit-copy reveal">
+              <p class="eyebrow">Visit Us</p>
+              <h2>Lake Nona, Orlando, FL</h2>
+              <ul class="visit-list">
+                <li><strong>Address:</strong> Lake Nona, Orlando, FL</li>
+                <li><strong>Hours:</strong> TODO: Daily / Weekend timings</li>
+                <li><strong>Phone:</strong> TODO</li>
+                <li><strong>Email:</strong> hello@icewarriors.com</li>
+              </ul>
+
+              <div class="map-card">
+                <iframe title="Map to Ice Warriors in Lake Nona" src="https://www.google.com/maps?q=Lake%20Nona%20Orlando%20FL&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+
+            <div class="contact-panel reveal">
+              <h3>Join the waitlist</h3>
+              <form id="formContato">
+                <label>
+                  <span>Name</span>
+                  <input type="text" name="name" placeholder="Your name" required />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" placeholder="you@example.com" required />
+                </label>
+                <label>
+                  <span>What are you looking for?</span>
+                  <textarea name="message" rows="4" placeholder="Tell us about your recovery goals" required></textarea>
+                </label>
+                <button class="btn btn-primary" type="submit">Request a consult</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="section faq" id="faq">
+          <div class="container faq-wrap reveal">
+            <div class="section-header left">
+              <p class="eyebrow">FAQ</p>
+              <h2>Everything you need before your first session.</h2>
+            </div>
+
+            <div class="faq-list">
+              <div class="faq-item is-open">
+                <button class="faq-question" type="button" aria-expanded="true">
+                  Is cold immersion safe?
+                </button>
+                <div class="faq-answer">
+                  <p>Yes, with a guided and supervised flow. We recommend consulting your physician if you have a medical condition or are under medical supervision.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  What should I expect on my first visit?
+                </button>
+                <div class="faq-answer" hidden>
+                  <p>Expect a brief orientation, guidance on breathing and timing, and a supervised first plunge in a temperature zone that matches your comfort and experience level.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  What should I bring?
+                </button>
+                <div class="faq-answer" hidden>
+                  <p>Comfortable swimwear, a towel, and a water bottle are recommended. We’ll guide you through the rest of the flow when you arrive.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  Are there contraindications?
+                </button>
+                <div class="faq-answer" hidden>
+                  <p>If you have a medical condition, are pregnant, or are under physician guidance, consult your physician before participating.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-wrap">
+          <div>
+            <p class="footer-brand">ICE WARRIORS</p>
+            <p class="footer-copy">Guided cold plunge recovery for Lake Nona and beyond.</p>
+          </div>
+
+          <div class="footer-meta">
+            <p>Disclaimer: This website is for informational and marketing purposes only and does not make medical claims. Consult your physician if you have a medical condition.</p>
+            <p>Ice Warriors Low Carb LLC</p>
+          </div>
+        </div>
+      </footer>
     </div>
-  </header>
 
-  <section id="sobre" class="section">
-    <h2>Sobre Nós</h2>
-    <p>O Ice Warriors é um centro de recuperação muscular inspirado em atletas que buscam performance e relaxamento. Oferecemos terapias de contraste, liberação miofascial e massagens exclusivas.</p>
-  </section>
-
-  <section id="servicos" class="section">
-    <h2>Etapas do Recovery</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Terapia de Contraste</h3>
-        <p>Banheira fria e ofurô quente para reduzir inflamações e melhorar circulação.</p>
-      </div>
-      <div class="card">
-        <h3>Liberação Miofascial</h3>
-        <p>Alívio de tensões e melhora da mobilidade muscular.</p>
-      </div>
-      <div class="card">
-        <h3>Compressão Pneumática</h3>
-        <p>Estimula o retorno venoso e acelera a recuperação pós-treino.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="galeria" class="section gallery">
-    <h2>Galeria</h2>
-    <div class="images">
-      <img src="img1.jpg" alt="Sala de recuperação">
-      <img src="img2.jpg" alt="Ofurô e sauna">
-      <img src="img3.jpg" alt="Massagem esportiva">
-    </div>
-  </section>
-
-  <section id="contato" class="section contato">
-    <h2>Contato e Agendamento</h2>
-    <form id="formContato">
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu e-mail" required>
-      <textarea placeholder="Mensagem" required></textarea>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2026 Ice Warriors Recovery | contato@icewarriors.com</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
