@@ -183,24 +183,32 @@ function initThemeToggle() {
   const themeToggle = document.querySelector('.theme-toggle');
   if (!themeToggle) return;
 
+  const setToggleState = (isLight) => {
+    themeToggle.classList.toggle('is-light', isLight);
+    themeToggle.setAttribute('aria-label', isLight ? 'Switch to Night mode' : 'Switch to Frost mode');
+    themeToggle.setAttribute('aria-pressed', String(isLight));
+    const copy = themeToggle.querySelector('.toggle-copy');
+    if (copy) {
+      copy.textContent = isLight ? 'Night' : 'Frost';
+    }
+  };
+
   const storedTheme = localStorage.getItem('ice-warriors-theme');
-  const preferLight = storedTheme === 'light' || (!storedTheme && window.matchMedia('(prefers-color-scheme: light)').matches);
-  applyTheme(preferLight);
+  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const isLight = storedTheme ? storedTheme === 'light' : systemPrefersLight;
+  applyTheme(isLight);
+  setToggleState(isLight);
 
   themeToggle.addEventListener('click', () => {
-    const nextIsLight = !document.body.classList.contains('light-theme');
+    const nextIsLight = !document.documentElement.getAttribute('data-theme') || document.documentElement.getAttribute('data-theme') !== 'light';
     applyTheme(nextIsLight);
+    setToggleState(nextIsLight);
   });
 }
 
 function applyTheme(isLight) {
-  document.body.classList.toggle('light-theme', isLight);
   document.documentElement.setAttribute('data-theme', isLight ? 'light' : 'dark');
-  const themeToggle = document.querySelector('.theme-toggle');
-  if (themeToggle) {
-    themeToggle.classList.toggle('is-light', isLight);
-    themeToggle.setAttribute('aria-label', isLight ? 'Toggle dark theme' : 'Toggle light theme');
-  }
+  document.body.classList.toggle('light-theme', isLight);
   localStorage.setItem('ice-warriors-theme', isLight ? 'light' : 'dark');
 }
 

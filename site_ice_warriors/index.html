@@ -13,10 +13,24 @@
     <link rel="canonical" href="https://www.icewarriors.com/" />
     <meta name="theme-color" content="#0A1A3A" />
     <title>Ice Warriors | Recover Like a Warrior.</title>
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem('ice-warriors-theme');
+          const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+          const isLight = savedTheme ? savedTheme === 'light' : prefersLight;
+          document.documentElement.setAttribute('data-theme', isLight ? 'light' : 'dark');
+          document.body && document.body.classList.toggle('light-theme', isLight);
+        } catch (error) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23EAF4FF' d='M32 4l7 16 13-2-9 13 9 13-13-2-7 16-7-16-13 2 9-13-9-13 13 2 7-16z'/%3E%3C/svg%3E" />
+    <link rel="preload" href="../imagem_cabecalho.jpg" as="image" fetchpriority="high" />
     <link rel="stylesheet" href="style.css" />
     <script type="application/ld+json">
       {
@@ -58,7 +72,10 @@
             <a href="#benefits">Benefits</a>
             <a href="#pricing">Memberships</a>
             <a href="#visit">Visit</a>
-            <button class="theme-toggle" type="button" aria-label="Toggle light theme"><span class="toggle-copy">Frost</span></button>
+            <button class="theme-toggle" type="button" aria-label="Switch to Frost mode" aria-pressed="false">
+              <span class="toggle-icon" aria-hidden="true">❄</span>
+              <span class="toggle-copy">Frost</span>
+            </button>
           </nav>
         </div>
       </header>
