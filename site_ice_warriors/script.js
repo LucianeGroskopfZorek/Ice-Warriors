@@ -577,8 +577,33 @@ function initComboCta() {
       const visitSection = document.getElementById('visit');
 
       if (messageField) {
-        messageField.value = `Tenho interesse no combo: ${cardName}`;
+        messageField.value = `I'm interested in the combo: ${cardName}`;
         messageField.focus();
       }
 
-      if
+      if (visitSection) {
+        visitSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+}
+
+renderCarousel();
+renderGrid();
+initScrollProgress();
+splitHeadingText();
+initScrollReveal();
+initNavSpy();
+initThemeToggle();
+initFaq();
+initForm();
+initGallery();
+initProtocolCarousel();
+initParallax();
+initCountUp();
+initMenuToggle();
+initSmoothAnchors();
+initScrollRevealFallback();
+initComboTabs();
+initComboAnimations();
+initComboCta();
