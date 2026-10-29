@@ -30,6 +30,10 @@ const dots = Array.from(document.querySelectorAll('.dot'));
 const protocolVisuals = Array.from(document.querySelectorAll('.protocol-visual'));
 const protocolItems = Array.from(document.querySelectorAll('.protocol-item'));
 const heroStats = Array.from(document.querySelectorAll('[data-count]'));
+const comboTabs = Array.from(document.querySelectorAll('.combo-tab'));
+const comboPanels = Array.from(document.querySelectorAll('.combo-panel'));
+const comboButtons = Array.from(document.querySelectorAll('.combo-cta'));
+const comboSteps = Array.from(document.querySelectorAll('.combo-step'));
 
 let activeIndex = 0;
 let activeSlide = 0;
@@ -518,22 +522,63 @@ function initScrollRevealFallback() {
   revealItems.forEach((item) => fallbackObserver.observe(item));
 }
 
-function init() {
-  document.documentElement.classList.add('js');
-  initScrollProgress();
-  splitHeadingText();
-  initScrollReveal();
-  initNavSpy();
-  initThemeToggle();
-  initFaq();
-  initForm();
-  initGallery();
-  initProtocolCarousel();
-  initParallax();
-  initCountUp();
-  initMenuToggle();
-  initSmoothAnchors();
-  initScrollRevealFallback();
+function initComboTabs() {
+  if (!comboTabs.length || !comboPanels.length) return;
+
+  comboTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+
+      comboTabs.forEach((item) => {
+        const isActive = item === tab;
+        item.classList.toggle('is-active', isActive);
+        item.setAttribute('aria-selected', String(isActive));
+      });
+
+      comboPanels.forEach((panel) => {
+        const isActive = panel.dataset.panel === target;
+        panel.classList.toggle('is-active', isActive);
+        panel.hidden = !isActive;
+      });
+    });
+  });
 }
 
-init();
+function initComboAnimations() {
+  if (!comboSteps.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      const delay = entry.target.dataset.index ? Number(entry.target.dataset.index) * 120 : 0;
+      setTimeout(() => {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }, delay);
+
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.2 });
+
+  comboSteps.forEach((step, index) => {
+    step.dataset.index = String(index);
+    observer.observe(step);
+  });
+}
+
+function initComboCta() {
+  if (!comboButtons.length) return;
+
+  comboButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const cardName = button.dataset.cardName || 'combo';
+      const messageField = document.getElementById('message');
+      const visitSection = document.getElementById('visit');
+
+      if (messageField) {
+        messageField.value = `Tenho interesse no combo: ${cardName}`;
+        messageField.focus();
+      }
+
+      if

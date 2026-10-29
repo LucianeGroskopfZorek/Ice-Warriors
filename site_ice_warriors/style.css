@@ -1625,148 +1625,332 @@ html[data-theme='light'] .site-footer {
   }
 }
 
-html[data-theme='light'] .site-header {
-  background: rgba(237, 246, 255, 0.68);
-  border-bottom-color: rgba(17, 45, 78, 0.08);
+.combos {
+  position: relative;
+  background: radial-gradient(circle at top, rgba(79, 163, 255, 0.16), transparent 28%), rgba(8, 17, 29, 0.15);
 }
 
-html[data-theme='light'] .site-nav a,
-html[data-theme='light'] .theme-toggle {
-  color: var(--text-soft);
+.combo-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 36px 0 28px;
 }
 
-html[data-theme='light'] .theme-toggle {
-  background: rgba(255, 255, 255, 0.65);
-  border-color: rgba(17, 45, 78, 0.12);
+.combo-step {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  text-align: center;
+  padding: 22px 18px 18px;
+  border-radius: 22px;
+  background: rgba(11, 26, 45, 0.7);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 30px rgba(2, 11, 22, 0.12);
+  opacity: 0;
+  transform: translateY(18px);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
 }
 
-html[data-theme='light'] .journey-item,
-html[data-theme='light'] .temp-card,
-html[data-theme='light'] .benefit-card,
-html[data-theme='light'] .price-card,
-html[data-theme='light'] .contact-panel,
-html[data-theme='light'] .faq-item,
-html[data-theme='light'] .gallery-viewport,
-html[data-theme='light'] .community-banner,
-html[data-theme='light'] .site-footer,
-html[data-theme='light'] .map-card,
-html[data-theme='light'] .protocol-item {
-  background: rgba(255, 255, 255, 0.78);
-  border-color: rgba(17, 45, 78, 0.12);
-  box-shadow: 0 18px 32px rgba(20, 40, 70, 0.08);
+.combo-step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(142, 197, 255, 0.52);
+  box-shadow: 0 22px 36px rgba(31, 115, 223, 0.18);
 }
 
-html[data-theme='light'] .journey-copy p,
-html[data-theme='light'] .benefit-card p,
-html[data-theme='light'] .temp-card p,
-html[data-theme='light'] .lead,
-html[data-theme='light'] .shift-copy p,
-html[data-theme='light'] .community-banner p,
-html[data-theme='light'] .visit-list,
-html[data-theme='light'] .footer-copy,
-html[data-theme='light'] .footer-meta p,
-html[data-theme='light'] .faq-answer p,
-html[data-theme='light'] .placeholder,
-html[data-theme='light'] .contact-panel span,
-html[data-theme='light'] .contact-panel input::placeholder,
-html[data-theme='light'] .contact-panel textarea::placeholder,
-html[data-theme='light'] .site-nav a,
-html[data-theme='light'] .theme-toggle,
-html[data-theme='light'] .protocol-content p,
-html[data-theme='light'] .status-pill {
-  color: var(--text-soft);
+.combo-step-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(79, 163, 255, 0.2), rgba(129, 183, 255, 0.08));
+  border: 1px solid rgba(143, 190, 255, 0.4);
+  color: var(--accent-strong);
+  font-size: 1.6rem;
 }
 
-html[data-theme='light'] .benefit-card::before {
-  background: linear-gradient(135deg, rgba(16, 96, 208, 0.08), transparent 60%);
-}
-
-html[data-theme='light'] .faq-question {
+.combo-step-title {
+  font-size: 0.98rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
   color: var(--text);
 }
 
-html[data-theme='light'] .contact-panel input,
-html[data-theme='light'] .contact-panel textarea {
-  background: rgba(234, 244, 255, 0.8);
+.combo-step small {
+  color: var(--text-soft);
+  font-size: 0.74rem;
+  line-height: 1.5;
+  text-transform: lowercase;
+}
+
+.combo-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  margin: 24px 0 20px;
+  border-radius: 999px;
+  background: rgba(11, 26, 45, 0.62);
+  border: 1px solid var(--border);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+.combo-tab {
+  position: relative;
+  border: 0;
+  background: transparent;
+  color: var(--text-soft);
+  border-radius: 999px;
+  min-height: 42px;
+  padding: 0 18px;
+  font-weight: 700;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.combo-tab.is-active {
+  background: linear-gradient(135deg, rgba(47, 123, 255, 0.2), rgba(99, 177, 255, 0.12));
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgba(143, 190, 255, 0.38);
+}
+
+.combo-tab:hover {
   color: var(--text);
 }
 
-html[data-theme='light'] .site-footer {
-  background: rgba(255, 255, 255, 0.7);
+.combo-panels {
+  position: relative;
 }
 
-html[data-theme='light'] .community-banner {
-  background: linear-gradient(135deg, rgba(234, 244, 255, 0.96), rgba(255, 255, 255, 0.9));
+.combo-panel {
+  display: none;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 320ms ease, transform 320ms ease;
 }
 
-html[data-theme='light'] .price-card.featured {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(222, 239, 255, 0.9));
+.combo-panel.is-active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-html[data-theme='light'] .plunge,
-html[data-theme='light'] .shift-reset,
-html[data-theme='light'] .beyond,
-html[data-theme='light'] .benefits {
-  background-color: transparent;
+.combo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 22px;
 }
 
-html[data-theme='light'] .plunge {
-  background: linear-gradient(180deg, rgba(147, 179, 211, 0.12), rgba(147, 179, 211, 0.06));
+.combo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 22px 20px 18px;
+  border-radius: 24px;
+  background: rgba(15, 33, 55, 0.76);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 32px rgba(3, 12, 22, 0.18);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
 }
 
-html[data-theme='light'] .shift-reset {
-  background: linear-gradient(135deg, rgba(218, 232, 250, 0.8), rgba(255, 255, 255, 0.72));
+.combo-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(143, 190, 255, 0.48);
+  box-shadow: 0 22px 34px rgba(31, 115, 223, 0.16), 0 0 24px rgba(79, 163, 255, 0.12);
 }
 
-html[data-theme='light'] .beyond {
-  background: rgba(255, 255, 255, 0.25);
+.combo-card.featured {
+  border-color: rgba(143, 190, 255, 0.5);
+  background: linear-gradient(180deg, rgba(13, 33, 60, 0.9), rgba(18, 43, 77, 0.84));
+  transform: scale(1.02);
 }
 
-html[data-theme='light'] .benefits {
-  background: linear-gradient(180deg, rgba(13, 36, 62, 0.03), rgba(13, 36, 62, 0));
+.combo-card.featured:hover {
+  transform: translateY(-6px) scale(1.02);
 }
 
-.hero .hero-meta li,
-.hero .card-badge,
-.hero .render-label,
-.hero .caption-tag {
+.combo-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(79, 163, 255, 0.18), rgba(99, 177, 255, 0.08));
+  border: 1px solid rgba(143, 190, 255, 0.36);
+  color: var(--accent-strong);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.combo-header {
+  margin-top: 18px;
+}
+
+.combo-header h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.combo-header p {
+  margin: 0;
   color: var(--text-soft);
+  min-height: 78px;
 }
 
-.hero .hero-meta li {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(12px);
+.combo-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 22px;
+  display: grid;
+  gap: 10px;
 }
 
-.hero .hero-meta strong {
-  color: #eaf4ff;
-}
-
-.hero .hero-card-main {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 30px 60px rgba(2, 11, 22, 0.42);
-}
-
-.hero .card-badge,
-.hero .render-label,
-.hero .caption-tag {
-  background: rgba(8, 19, 31, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+.combo-benefits li {
+  position: relative;
+  padding-left: 18px;
   color: var(--text-soft);
+  font-size: 0.94rem;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .btn,
-  .temp-card,
-  .benefit-card,
-  .tab,
-  .dot,
-  .carousel-btn,
-  .faq-question::after,
-  .site-nav a,
-  .theme-toggle {
-    transition: none;
+.combo-benefits li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent));
+  box-shadow: 0 0 12px rgba(79, 163, 255, 0.4);
+}
+
+.combo-card .btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+.combo-contract {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.contract-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  text-align: center;
+  padding: 18px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: rgba(10, 26, 45, 0.72);
+  box-shadow: 0 14px 24px rgba(2, 11, 22, 0.08);
+}
+
+.contract-item span {
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contract-item small {
+  margin-top: 6px;
+  color: var(--text-soft);
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+}
+
+.combo-note {
+  margin: 18px 0 0;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  text-align: center;
+}
+
+.combo-inline-note {
+  margin: 18px 0 0;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 1100px) {
+  .combo-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
   }
+}
+
+@media (max-width: 760px) {
+  .combo-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .combo-grid,
+  .combo-contract {
+    grid-template-columns: 1fr;
+  }
+
+  .combo-card.featured {
+    transform: none;
+  }
+
+  .combo-card.featured:hover {
+    transform: translateY(-6px);
+  }
+
+  .combo-tab {
+    flex: 1;
+  }
+}
+
+html[data-theme='light'] .combos {
+  background: radial-gradient(circle at top, rgba(79, 163, 255, 0.14), transparent 28%), rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme='light'] .combo-step,
+html[data-theme='light'] .combo-card,
+html[data-theme='light'] .contract-item,
+html[data-theme='light'] .combo-tabs {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(17, 45, 78, 0.12);
+}
+
+html[data-theme='light'] .combo-card.featured {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(222, 239, 255, 0.9));
+}
+
+html[data-theme='light'] .combo-tab {
+  color: var(--text-soft);
+}
+
+html[data-theme='light'] .combo-tab.is-active {
+  background: linear-gradient(135deg, rgba(16, 96, 208, 0.12), rgba(36, 123, 234, 0.08));
+}
+
+html[data-theme='light'] .combo-step small,
+html[data-theme='light'] .combo-header p,
+html[data-theme='light'] .combo-benefits li,
+html[data-theme='light'] .contract-item small,
+html[data-theme='light'] .combo-note {
+  color: var(--text-soft);
+}
+
+html[data-theme='light'] .combo-step {
+  box-shadow: 0 18px 30px rgba(20, 40, 70, 0.08);
 }
